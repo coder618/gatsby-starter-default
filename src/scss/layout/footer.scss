@@ -1,0 +1,126 @@
+footer {
+  background-color: #9aca3c;
+  .top {
+    min-height: 500px;
+    .right-part {
+      margin: 65px 0 40px 690px;
+    }
+    .address-items {
+      display: flex;
+      > div {
+        margin-right: 100px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .bottom {
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+footer .bottom {
+  background: #002a35;
+  padding: 85px 0 110px 0;
+  .follow-part {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #eeeeee;
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      path {
+        fill: #fff;
+      }
+      &:hover {
+        transform: translateY(-5px);
+        path {
+          fill: #9aca3c;
+        }
+      }
+    }
+    li {
+      margin-left: 25px;
+    }
+  }
+  .privacy-link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #eeeeee;
+    text-decoration: none;
+    position: relative;
+    &:after {
+      content: " ";
+      width: 0%;
+      height: 2px;
+      bottom: -2px;
+      transition: all 0.3s ease;
+      left: 0;
+      background-color: #9aca3c;
+      position: absolute;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .right {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 40px 0 0 0;
+      color: #eeeeee;
+    }
+  }
+}
+
+.contact-form {
+  width: 460px;
+  background: #ffffff;
+  filter: drop-shadow(0px 3px 90px rgba(0, 0, 0, 0.25));
+  //   height: 565px;
+  top: -80px;
+  position: absolute;
+  padding: 30px 60px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 45px;
+    color: #001317;
+    margin-bottom: 25px;
+  }
+
+  .btn-primary {
+    min-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

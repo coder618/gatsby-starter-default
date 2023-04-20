@@ -1,4 +1,5 @@
 $y: yellow;
+$lime: #9aca3c;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@400;700&display=swap");
 
 body {
@@ -17,4 +18,58 @@ h4,
 h5,
 h6 {
   font-family: "Work Sans", sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+
+  label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #001317;
+    margin-bottom: 10px;
+    font-family: "Work Sans", sans-serif;
+  }
+
+  input {
+    border: 2px solid #002a35;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 20px;
+    transition: all 0.2s ease;
+  }
+  textarea {
+    border: 2px solid #002a35;
+    height: 150px;
+    transition: all 0.3s ease;
+    height: 106px;
+    padding: 20px;
+    resize: none;
+    font-size: 20px;
+  }
+
+  input:active,
+  input:focus {
+    border: 2px solid #9aca3c !important;
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  background-color: #9aca3c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #001317;
+  }
 }
