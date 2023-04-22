@@ -9,6 +9,15 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   let body = {}
+
+  const moveToContact = e => {
+    e.preventDefault()
+    if (typeof document !== "undefined") {
+      const element = document.getElementById("footer")
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   if (typeof document !== "undefined") {
     body = document.getElementsByTagName("html")[0]
   }
@@ -70,7 +79,7 @@ function Header() {
               )
             })}
             <li>
-              <a className="btn btn-primary" href="#">
+              <a className="btn btn-primary" href="#" onClick={moveToContact}>
                 Contact Us
               </a>
             </li>

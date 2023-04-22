@@ -1,10 +1,8 @@
 # task remain
 
-3. Make contact form working
-4. Connect Contentful api
+1. Connect Contentful api
 
-5. Deploy via netlify
-6. Make pixel perfect inspection
+2. Make pixel perfect inspection
 
 # Done
 

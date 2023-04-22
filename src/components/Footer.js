@@ -17,7 +17,7 @@ const contact_items = [
 ]
 
 const Footer = ({ siteTitle }) => (
-  <footer>
+  <footer id="footer">
     <div className="top">
       <div className="container">
         <ContactForm />
