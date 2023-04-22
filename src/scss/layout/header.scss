@@ -6,6 +6,7 @@ header {
   z-index: 1000;
   width: 100%;
   transition: all 0.3s ease;
+
   .container {
     display: flex;
     align-items: center;
@@ -52,6 +53,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .cross {
+      display: none;
+      path {
+        fill: #94c23a;
+      }
+    }
   }
 
   .site-link {
@@ -62,21 +70,29 @@ header {
   @media only screen and (max-width: 768px) {
     padding: 16px 0px;
     background: linear-gradient(180deg, #002a35 0%, #001e26 424.93%);
-
-    ul.menu-list {
-      display: none;
-      display: block;
+    .menu-wrapper {
+      height: calc(100% - 80px);
       position: fixed;
+      top: 80px;
+      left: 0;
       background: #002029;
+      width: 100%;
+      overflow-y: auto;
+      transition: all 0.3s ease;
+      transform: translateX(100%);
+    }
+    &.scrolled {
+      .menu-wrapper {
+        top: 60px;
+        height: calc(100% - 60px);
+      }
+    }
+    ul.menu-list {
+      display: block;
       margin: 0;
       padding: 20px 0 30px 0;
       width: 100%;
-      left: 0;
       padding-top: 20px;
-      top: 60px;
-      height: calc(100% - 60px);
-      overflow-y: auto;
-
       a {
         padding: 20px 0;
         display: block;
@@ -84,8 +100,29 @@ header {
       }
 
       a.btn-primary {
+        margin-top: 15px;
         display: inline-block;
-        padding: 20px 35px;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+// when menu opened
+@media only screen and (max-width: 768px) {
+  html.mobile-menu-opened {
+    overflow: hidden;
+    header .menu-wrapper {
+      transform: translateX(0);
+    }
+    header {
+      .mobile-menu-toggler {
+        .hamburger {
+          display: none;
+        }
+        .cross {
+          display: block;
+        }
       }
     }
   }

@@ -7,6 +7,30 @@ import "../scss/layout/header.scss"
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const body = document.getElementsByTagName("html")[0]
+
+  const toggleMenuVisibility = e => {
+    e.preventDefault()
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const menuItems = [
+    {
+      link: "#",
+      title: "Skylark Capital",
+    },
+    {
+      link: "#",
+      title: "Skylark Capital 2 ",
+    },
+    {
+      link: "#",
+      title: "Skylark Capital 3 ",
+    },
+  ]
+
   useEffect(() => {
     function handleScroll() {
       if (window.pageYOffset > 50) {
@@ -16,12 +40,18 @@ function Header() {
       }
     }
 
+    if (isMenuOpen) {
+      body.classList.add("mobile-menu-opened")
+    } else {
+      body.classList.remove("mobile-menu-opened")
+    }
+
     window.addEventListener("scroll", handleScroll)
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [])
+  }, [isMenuOpen])
 
   return (
     <header className={isScrolled ? "scrolled" : ""}>
@@ -31,21 +61,13 @@ function Header() {
         </Link>
         <div className="menu-wrapper">
           <ul className="menu-list">
-            <li>
-              <a href="#">Skylark Capital</a>
-            </li>
-            <li>
-              <a href="#">Mobile Enterprise</a>
-            </li>
-            <li>
-              <a href="#">Mobile Footprint</a>
-            </li>
-            <li>
-              <a href="#">Big Data</a>
-            </li>
-            <li>
-              <a href="#">Audio Visual</a>
-            </li>
+            {menuItems.map(function (item) {
+              return (
+                <li key={item.title}>
+                  <a href={item.link}>{item.title}</a>
+                </li>
+              )
+            })}
             <li>
               <a className="btn btn-primary" href="#">
                 Contact Us
@@ -54,12 +76,29 @@ function Header() {
           </ul>
         </div>
         <div className="only-mobile">
-          <button className="mobile-menu-toggler">
+          <button
+            className="mobile-menu-toggler"
+            onClick={e => {
+              toggleMenuVisibility(e)
+            }}
+          >
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              className="cross"
+            >
+              <path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+            </svg>
             <svg
               width="25"
               height="25"
               viewBox="0 0 25 25"
               fill="none"
+              className="hamburger"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path

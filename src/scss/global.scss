@@ -102,3 +102,10 @@ p {
 
 h1 {
 }
+
+.only-mobile {
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}

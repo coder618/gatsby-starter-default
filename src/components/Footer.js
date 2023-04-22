@@ -26,7 +26,7 @@ const Footer = ({ siteTitle }) => (
           <div className="address-items">
             {contact_items.map(item => {
               return (
-                <div className="address-item">
+                <div key={item.title} className="address-item">
                   {" "}
                   <h3>{item.title}</h3>
                   <p>{item.address}</p>{" "}
