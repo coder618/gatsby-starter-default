@@ -18,16 +18,8 @@ function Header() {
 
   const menuItems = [
     {
-      link: "#",
-      title: "Skylark Capital",
-    },
-    {
-      link: "#",
-      title: "Skylark Capital 2 ",
-    },
-    {
-      link: "#",
-      title: "Skylark Capital 3 ",
+      link: "/generic-page",
+      title: "Generic Page",
     },
   ]
 
@@ -56,7 +48,7 @@ function Header() {
   return (
     <header className={isScrolled ? "scrolled" : ""}>
       <div className="container">
-        <Link className="site-link" href="/">
+        <Link className="site-link" to="/">
           <img src="../logo.svg" alt="logo" />
         </Link>
         <div className="menu-wrapper">
@@ -64,7 +56,7 @@ function Header() {
             {menuItems.map(function (item) {
               return (
                 <li key={item.title}>
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               )
             })}
@@ -83,10 +75,10 @@ function Header() {
             }}
           >
             <svg
-              clip-rule="evenodd"
-              fill-rule="evenodd"
-              stroke-linejoin="round"
-              stroke-miterlimit="2"
+              clipRule="evenodd"
+              fillRule="evenodd"
+              strokeLinejoin="round"
+              strokeMiterlimit="2"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               className="cross"
