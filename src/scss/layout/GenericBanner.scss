@@ -1,0 +1,54 @@
+.generic-banner {
+  margin-bottom: -230px;
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    .shape-1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+    .shape-2 {
+      z-index: 1;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .text-part {
+    z-index: 3;
+    padding: 180px 0 300px 60px;
+    position: relative;
+  }
+  .ufo {
+    position: absolute;
+    right: 115px;
+    top: -70px;
+  }
+  .container {
+    position: relative;
+  }
+
+  .bottom-part {
+    // background-color: #eee;
+    padding: 30px 0 300px 0;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #001317;
+  }
+  @media only screen and (max-width: 1500px) {
+    .ufo {
+      top: -120px;
+    }
+  }
+}

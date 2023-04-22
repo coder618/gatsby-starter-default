@@ -1,0 +1,22 @@
+.detail-text {
+  z-index: 10;
+  position: relative;
+  .content {
+    background: #ffffff;
+    box-shadow: 0px 3px 94px rgba(0, 0, 0, 0.15);
+    padding: 40px 60px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #001317;
+    margin-bottom: 25px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 45px;
+    color: #001317;
+  }
+}
