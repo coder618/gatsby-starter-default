@@ -1,9 +1,9 @@
 # task remain
 
-2. Make responsive version
-3. Make contact form working
-4. Connect Contentful api
-5. Deploy via netlify
+1. Make responsive version
+2. Make contact form working
+3. Connect Contentful api
+4. Deploy via netlify
 
 # Done
 

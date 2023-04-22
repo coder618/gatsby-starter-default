@@ -1,17 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import "../../scss/home/banner.scss"
+import "../../scss/home/banner-home.scss"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Banner = () => (
   <div className="banner-home">
-    <StaticImage
-      src="../../images/banner-home-bg.svg"
-      loading="eager"
-      className="banner-bg"
-      formats={["auto", "webp", "avif"]}
-      alt=""
-    />
+    <img src="../banner-home-bg.svg" className="banner-bg desktop" />
+    <img src="../banner-home-bg-mobile.svg" className="banner-bg mobile" />
+
     <div className="top">
       <div className="content">
         <img src="../home-ufo.svg" alt="" className="ufo-home-bg" />
