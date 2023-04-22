@@ -7,7 +7,6 @@ import "../scss/layout/header.scss"
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
-
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const body = document.getElementsByTagName("html")[0]
 
@@ -33,15 +32,21 @@ function Header() {
     }
 
     if (isMenuOpen) {
-      body.classList.add("mobile-menu-opened")
+      if (typeof document !== "undefined") {
+        body.classList.add("mobile-menu-opened")
+      }
     } else {
-      body.classList.remove("mobile-menu-opened")
+      if (typeof document !== "undefined") {
+        body.classList.remove("mobile-menu-opened")
+      }
     }
-
-    window.addEventListener("scroll", handleScroll)
-
+    if (typeof document !== "undefined") {
+      window.addEventListener("scroll", handleScroll)
+    }
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      if (typeof document !== "undefined") {
+        window.removeEventListener("scroll", handleScroll)
+      }
     }
   }, [isMenuOpen])
 
