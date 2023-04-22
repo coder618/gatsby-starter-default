@@ -5,6 +5,7 @@ header {
   top: 0;
   z-index: 1000;
   width: 100%;
+  transition: all 0.3s ease;
   .container {
     display: flex;
     align-items: center;
@@ -35,5 +36,10 @@ header {
     font-size: 12px;
     line-height: 14px;
     padding: 10px 20px;
+  }
+
+  &.scrolled {
+    padding: 10px 0;
+    background: linear-gradient(180deg, #002a35 0%, #001e26 424.93%);
   }
 }

@@ -1,14 +1,14 @@
 # task remain
 
-1. Complete home Banner and sub page banner
+1. Make main heading styling after scroll
 2. Make responsive version
-3. Make main heading styling after scroll
-4. Make contact form working
-5. Connect Contentful api
-6. Deploy via netlify
+3. Make contact form working
+4. Connect Contentful api
+5. Deploy via netlify
 
 # Done
 
+1. Complete home Banner and sub page banner
 1. Main main menu
-2. Make footer
-3. Make sub page
+1. Make footer
+1. Make sub page

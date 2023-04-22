@@ -14,6 +14,7 @@ const Banner = () => (
     />
     <div className="top">
       <div className="content">
+        <img src="../home-ufo.svg" alt="" className="ufo-home-bg" />
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
