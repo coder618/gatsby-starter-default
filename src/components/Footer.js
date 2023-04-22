@@ -12,8 +12,7 @@ const contact_items = [
   },
   {
     title: "Bangladesh",
-    address:
-      "11/B, Meherba Plaza,<br> 33, Topkhana Road,<br> Dhaka <br>        +880-2-9572022<br>        +880-2-9572022",
+    address: "11/B, Meherba Plaza,<br> 33, Topkhana Road,<br",
   },
 ]
 
@@ -98,6 +97,9 @@ const Footer = ({ siteTitle }) => (
             alt=""
           />
           <p>©2023 Jaatra.</p>
+          <a className="privacy-link" href="#">
+            Privacy Policy
+          </a>
         </div>
       </div>
     </div>

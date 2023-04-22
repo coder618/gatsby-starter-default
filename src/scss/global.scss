@@ -6,10 +6,17 @@ body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
 }
+div {
+  box-sizing: border-box;
+}
 .container {
-  max-width: 1140px;
   width: 100%;
-  margin: 0 auto;
+  max-width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 h1,
 h2,

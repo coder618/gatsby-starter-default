@@ -11,7 +11,7 @@ header {
     align-items: center;
     justify-content: space-between;
   }
-  .menu-list {
+  ul.menu-list {
     display: flex;
     margin: 0;
     list-style: none;
@@ -41,5 +41,10 @@ header {
   &.scrolled {
     padding: 10px 0;
     background: linear-gradient(180deg, #002a35 0%, #001e26 424.93%);
+  }
+  @media only screen and (max-width: 768px) {
+    ul.menu-list {
+      display: none;
+    }
   }
 }

@@ -25,6 +25,24 @@ footer {
     justify-content: space-between;
     position: relative;
   }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 0 16px;
+      justify-content: center;
+      align-items: center;
+    }
+    .top {
+    }
+
+    .top .right-part {
+      margin: 0;
+      .address-items {
+        flex-direction: column;
+      }
+    }
+  }
 }
 footer .bottom {
   background: #002a35;
@@ -100,6 +118,43 @@ footer .bottom {
       color: #eeeeee;
     }
   }
+  .right {
+    .privacy-link {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 20px 0;
+    .left {
+      .privacy-link {
+        display: none;
+      }
+      flex-direction: column;
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .privacy-link {
+        display: inline-block;
+      }
+    }
+
+    h3 {
+      margin-bottom: 25px;
+    }
+    .follow-part {
+      flex-direction: column;
+      margin: 0 0 25px 0;
+      ul {
+        li {
+          &:first-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .contact-form {
@@ -123,5 +178,20 @@ footer .bottom {
     min-height: 60px;
     font-size: 20px;
     font-weight: 700;
+  }
+  @media only screen and (max-width: 768px) {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+    padding: 25px;
+    h2 {
+      margin: 0 0 28px 0;
+    }
+    .content {
+      > div:last-of-type {
+        margin: 0;
+      }
+    }
   }
 }
