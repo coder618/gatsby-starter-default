@@ -8,8 +8,10 @@ import "../scss/layout/header.scss"
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const body = document.getElementsByTagName("html")[0]
-
+  let body = {}
+  if (typeof document !== "undefined") {
+    body = document.getElementsByTagName("html")[0]
+  }
   const toggleMenuVisibility = e => {
     e.preventDefault()
     setIsMenuOpen(!isMenuOpen)
@@ -24,10 +26,12 @@ function Header() {
 
   useEffect(() => {
     function handleScroll() {
-      if (window.pageYOffset > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
+      if (typeof document !== "undefined") {
+        if (window.pageYOffset > 50) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
       }
     }
 
