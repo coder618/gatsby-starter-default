@@ -4,7 +4,8 @@ footer {
   .top {
     min-height: 500px;
     .right-part {
-      margin: 65px 0 40px 690px;
+      margin: 65px 0 40px auto;
+      max-width: 500px;
     }
     .address-items {
       display: flex;

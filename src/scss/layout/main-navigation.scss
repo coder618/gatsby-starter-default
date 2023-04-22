@@ -44,6 +44,8 @@ header {
   }
   @media only screen and (max-width: 768px) {
     padding: 16px 0px;
+    background: linear-gradient(180deg, #002a35 0%, #001e26 424.93%);
+
     ul.menu-list {
       display: none;
     }

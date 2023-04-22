@@ -1,9 +1,12 @@
 # task remain
 
 1. Make responsive version
-2. Make contact form working
-3. Connect Contentful api
-4. Deploy via netlify
+2. Mobile Menu
+3. Make contact form working
+4. Connect Contentful api
+
+5. Deploy via netlify
+6. Make pixel perfect inspection
 
 # Done
 

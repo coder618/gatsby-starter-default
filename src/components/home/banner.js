@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import "../../scss/home/banner-home.scss"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 const Banner = () => (
   <div className="banner-home">

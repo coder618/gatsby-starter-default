@@ -9,13 +9,7 @@ const HalfNHalf = () => (
       {/* item start  */}
       <div className="item">
         <div className="img-part">
-          <StaticImage
-            src="../../images/sample-img-1.svg"
-            loading="eager"
-            className="banner-bg"
-            formats={["svg", "webp", "avif"]}
-            alt=""
-          />
+          <img src="../../sample-img-1.svg" />
         </div>
         <div className="text-part">
           <h2>Lorem ipsum dolor sit amet</h2>

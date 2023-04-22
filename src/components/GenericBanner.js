@@ -6,7 +6,7 @@ import "../scss/layout/GenericBanner.scss"
 
 const GenericBanner = () => (
   <div className="generic-banner">
-    <div className="bg">
+    <div className="bg desktop">
       <img
         className="shape-1"
         src="../generic-banner-shape-1.svg"
@@ -16,6 +16,13 @@ const GenericBanner = () => (
         className="shape-2"
         src="../generic-banner-shape-2.svg"
         alt="shape-2"
+      />
+    </div>
+    <div className="bg mobile">
+      <img
+        className="shape-1"
+        src="../generic-banner-bg-mobile.svg"
+        alt="shape-1"
       />
     </div>
 
