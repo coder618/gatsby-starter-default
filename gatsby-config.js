@@ -47,15 +47,11 @@ module.exports = {
         spaceId: "yuixrmbas0v2",
         downloadLocal: true,
         forceFullSync: true,
-        // contentTypes: [
-        //   `page`,
-        //   `locationBlock`,
-        //   // Other content types
-        // ],
         accessToken: "QVCqRcH8GZEsAkJ62yektD7xpxxfyd_-ln60_Jjb4Xw",
       },
     },
 
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
   ],
 }
