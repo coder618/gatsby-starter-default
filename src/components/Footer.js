@@ -5,18 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "../scss/layout/footer.scss"
 
-const contact_items = [
-  {
-    title: " United Kingdom",
-    address:
-      " 25 Park Avenue, <br> LAXFORD BRIDGE,<br>IV27 2ERM<br>070 0220 6238",
-  },
-  {
-    title: "Bangladesh",
-    address: "11/B, Meherba Plaza,<br> 33, Topkhana Road,<br",
-  },
-]
-
 const Footer = ({ siteTitle }) => {
   const results = useStaticQuery(graphql`
     query {
@@ -119,7 +107,7 @@ const Footer = ({ siteTitle }) => {
               formats={["auto", "svg", "avif"]}
               alt=""
             />
-            <p>©2023 Jaatra.</p>
+            <p className="copyright-text">©2023 Jaatra.</p>
             <a className="privacy-link" href="#">
               Privacy Policy
             </a>

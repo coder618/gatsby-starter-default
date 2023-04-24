@@ -42,7 +42,13 @@ function Header() {
     e.preventDefault()
     if (typeof document !== "undefined") {
       const element = document.getElementById("footer")
-      element.scrollIntoView({ behavior: "smooth" })
+      body.classList.remove("mobile-menu-opened")
+      // const element = document.getElementById('myElement');
+      const offset = 100 // vertical offset value in pixels
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" })
     }
   }
 
@@ -52,6 +58,14 @@ function Header() {
   const toggleMenuVisibility = e => {
     e.preventDefault()
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  function handleAnchorClick(event) {
+    if (typeof document !== "undefined") {
+      body.classList.remove("mobile-menu-opened")
+    }
+    // console.log("Anchor clicked")
+    // Do something else here
   }
 
   useEffect(() => {
@@ -94,7 +108,7 @@ function Header() {
           <ul className="menu-list">
             {menuItems.map(function (item) {
               return (
-                <li key={item.title}>
+                <li onClick={handleAnchorClick} key={item.title}>
                   <Link to={item.link}>{item.title}</Link>
                 </li>
               )
