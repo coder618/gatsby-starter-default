@@ -1,10 +1,9 @@
 # task remain
 
-1. home page dynamic
-2. Make Dynamic footer menu
-3. Make Dynamic footer contact menu
+1. Make Dynamic footer contact menu
+2. Close mobile navigation on click link
+3. home page dynamic
 4. Do some polishing
-5. Close mobile navigation on click link
 
 # Done
 
