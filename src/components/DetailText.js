@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import "../scss/components/DetailText.scss"
 import ReactMarkdown from "react-markdown"
 

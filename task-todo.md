@@ -1,16 +1,19 @@
 # task remain
 
-1. Connect Contentful api
-2. Do some polishing
-3. Close mobile navigation on click link
+1. home page dynamic
+2. Make Dynamic footer menu
+3. Make Dynamic footer contact menu
+4. Do some polishing
+5. Close mobile navigation on click link
 
 # Done
 
 1. Make responsive version
-2. Move to footer add
-3. Mobile Menu
-4. Make main heading styling after scroll
-5. Complete home Banner and sub page banner
-6. Main main menu
-7. Make footer
-8. Make sub page
+2. Make Dynamic menu
+3. Move to footer add
+4. Mobile Menu
+5. Make main heading styling after scroll
+6. Complete home Banner and sub page banner
+7. Main main menu
+8. Make footer
+9. Make sub page

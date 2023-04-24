@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { Link } from "gatsby"
 
@@ -8,6 +9,33 @@ import "../scss/layout/header.scss"
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const results = useStaticQuery(graphql`
+    query {
+      allContentfulPage {
+        edges {
+          node {
+            pageName
+            slug
+            nanner {
+              nanner
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const pageItems = results.allContentfulPage.edges
+
+  const menuItems = pageItems.map(item => {
+    return {
+      link: `/${item.node.slug}`,
+      title: `${item.node.pageName}`,
+    }
+  })
+  // const menuItems = []
+
   let body = {}
 
   const moveToContact = e => {
@@ -25,13 +53,6 @@ function Header() {
     e.preventDefault()
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const menuItems = [
-    {
-      link: "/generic-page",
-      title: "Generic Page",
-    },
-  ]
 
   useEffect(() => {
     function handleScroll() {
