@@ -10,9 +10,6 @@ import GenericBanner from "../components/GenericBanner"
 
 const GenericPageTemplates = contextData => {
   const data = contextData.pageContext.data
-  console.log({ data })
-
-  // const posts = data.allContentfulBlogPost.nodes
 
   return (
     <Layout>

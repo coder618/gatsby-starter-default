@@ -1,6 +1,8 @@
 footer {
   background-color: #9aca3c;
   margin-top: 150px;
+  z-index: 10;
+  position: relative;
   .top {
     min-height: 500px;
     .right-part {
