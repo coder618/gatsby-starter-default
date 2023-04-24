@@ -19,3 +19,4 @@
 
 #URL
 https://john-test-site.netlify.app
+https://gatsbystarterdefault99708.gatsbyjs.io/
