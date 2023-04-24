@@ -1,15 +1,16 @@
 # task remain
 
 1. Connect Contentful api
-
-2. Make pixel perfect inspection
+2. Do some polishing
+3. Close mobile navigation on click link
 
 # Done
 
 1. Make responsive version
-2. Mobile Menu
-3. Make main heading styling after scroll
-4. Complete home Banner and sub page banner
-5. Main main menu
-6. Make footer
-7. Make sub page
+2. Move to footer add
+3. Mobile Menu
+4. Make main heading styling after scroll
+5. Complete home Banner and sub page banner
+6. Main main menu
+7. Make footer
+8. Make sub page
