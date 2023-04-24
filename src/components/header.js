@@ -44,7 +44,7 @@ function Header() {
       const element = document.getElementById("footer")
       body.classList.remove("mobile-menu-opened")
       // const element = document.getElementById('myElement');
-      const offset = 100 // vertical offset value in pixels
+      const offset = 150 // vertical offset value in pixels
       const elementPosition =
         element.getBoundingClientRect().top + window.pageYOffset
       const offsetPosition = elementPosition - offset
