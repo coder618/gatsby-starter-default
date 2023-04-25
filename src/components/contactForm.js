@@ -3,13 +3,13 @@ import * as React from "react"
 import { useState } from "react"
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false)
+  const [disableState, setDisableState] = useState(false)
   const [responseMessage, setResponseMessage] = useState("")
 
   const handleSubmit = event => {
     event.preventDefault()
-    setSubmitted(true)
-
+    setDisableState(true)
+    setResponseMessage("")
     const myForm = event.target
     const formData = new FormData(myForm)
 
@@ -19,11 +19,11 @@ const ContactForm = () => {
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        setSubmitted(false)
+        setDisableState(false)
         setResponseMessage("We Have received your message")
       })
       .catch(error => {
-        setSubmitted(false)
+        setDisableState(false)
         setResponseMessage(
           "Something is wrong please contact us at testing@gmail.com "
         )
@@ -53,13 +53,13 @@ const ContactForm = () => {
             <textarea id="message" name="message" required></textarea>
           </div>
 
-          <div className={submitted ? "form-group" : "d-none"}>
+          <div className={responseMessage ? "form-group" : "d-none"}>
             <div className="alert">{responseMessage}</div>
           </div>
 
           <div className="form-group">
             <button
-              disabled={submitted}
+              disabled={disableState}
               type="submit"
               className="btn btn-primary"
             >
