@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 const ContactForm = () => {
-  /*
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -17,13 +16,12 @@ const ContactForm = () => {
       .then(() => console.log("/thank-you/"))
       .catch(error => alert(error))
   }
-*/
   return (
     <form
       name="contact"
       method="POST"
       data-netlify="true"
-      // onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="contact-form">

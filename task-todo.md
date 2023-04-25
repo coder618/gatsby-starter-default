@@ -1,6 +1,7 @@
 # task remain
 
-3. home page dynamic
+1. Contact Form fix for other page
+2. home page dynamic
 
 # Done
 
