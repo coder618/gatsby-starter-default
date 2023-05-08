@@ -19,6 +19,17 @@ const GenericPageTemplates = contextData => {
   )
 }
 
-export const Head = () => <Seo title="Using DSG" />
+export const Head = contextData => {
+  // console.log("{contextData}")
+  // console.log(contextData)
+  let title = ""
+
+  if ("pageContext" in contextData && "data" in contextData.pageContext) {
+    const data = contextData.pageContext.data
+    title = data.pageName
+  }
+
+  return <Seo title={title} />
+}
 
 export default GenericPageTemplates
